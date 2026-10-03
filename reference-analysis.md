@@ -1,105 +1,30 @@
-# Referanseanalyse før implementering
+# Referanseanalyse og rekonstruksjon
 
-Referansen er en høy, fullengdes desktop-landingsside i portrettformat på omtrent 1152 × 2048 px. Den er ikke bare en farge- eller typografireferanse; den har en spesifikk rytme, et fast grid og tydelige overgangsflater.
+Denne analysen gjelder det vedlagte bildet på **1152 × 2048 piksler**. Den gamle analysen tok feil av høyden og beskrev derfor en annen siderytme. Her er de faktiske grensene målt i referansebildet og bekreftet mot en render av nettsiden i samme viewport.
 
-## Overordnet system
+| Del | Referanse, y-posisjon | Ny render, y-posisjon | Struktur |
+| --- | ---: | ---: | --- |
+| Header og hero | 0–400 | 0–400 | Smal header, todelt hero, stor serifoverskrift og bildemontasje |
+| Sort bånd | 400–440 | 400–440 | Tett horisontal fagordrekke med oransje prikker |
+| Tjenester | 440–900 | 440–900 | Overskrift/tekst øverst, lyst og mørkt kort, dekor til høyre |
+| Blå prosess | 900–1220 | 900–1220 | Stor tittel til venstre, fire sirkelsteg på horisontal linje |
+| Prosjekter | 1220–1460 | 1220–1460 | Smal venstrekolonne, tre bildekort, etikettkolonne til høyre |
+| Om | 1460–1720 | 1460–1720 | Mørk flate, portrett, stor tittel og sirkel til høyre |
+| Kontakt | 1720–1960 | 1720–1960 | Lys flate, stor overskrift, lett skjema og håndskrevet notis |
+| Footer | 1960–2048 | 1960–2048 | Lav mørk avslutning |
 
-- **Canvas:** varm off-white / elfenben som grunnflate.
-- **Innholdsbredde:** omtrent 87–89 % av viewporten, med ca. 7 % venstremarg og 7 % høyremarg.
-- **Typografisk kontrast:** tung moderne sans i små tekster/navn og stor høy kontrast serif i alle hovedoverskrifter. Kursiv serif brukes som aksent og settes ofte i klar blå.
-- **Farger:** off-white `#f4f1e9`, nesten sort `#151515`, klar blå `#1558d8`, oransje `#ff6b2a`, dempet grå/grønn til støttefarger.
-- **Mellomrom:** store, nesten redaksjonelle luftsoner. Hver hovedseksjon har tydelig egen høyde og sterk overgang til neste flate.
-- **Dekor:** tynne tekniske etiketter, vertikale sidemarkører, håndtegnede piler/notater, sirkler og geometriske former. Dekoren ligger i bestemte områder og skal ikke bli tilfeldig pynt.
+## Visuell oppbygning
 
-## 1. Header og hero – ca. 0–300 px
+**Grid:** Header og hero har smalere, sentrert innhold enn resten av siden. De øvrige seksjonene bruker omtrent 1000 px innholdsbredde ved 1152 px viewport. Heroens bildekolonne ligger delvis bak den store venstre overskriften; dekorative sirkler går ut av synlig område til høyre.
 
-- **Headerhøyde:** ca. 52 px, hvit/off-white, sentrert innhold.
-- **Grid:** logo venstre; liten horisontal navigasjon høyre; mørk CTA helt til høyre.
-- **Logo:** liten sort kvadratisk markør med blått element + mørk sans-logo.
-- **Hero:** to like brede kolonner; venstre tekst, høyre komposisjon.
-- **Venstre tekst:** liten monospace-eyebrow øverst; hovedtittel ca. 74–88 px, stram linjehøyde, serif. Ordene «særpreg.» er blå og kursiv. Brødtekst er liten, grå og kort.
-- **CTA:** to små mørke/lyse knapper under brødteksten.
-- **Fakta:** liten horisontal linje med Bergen/Oslo/Norge langs venstre side og pris/levering i bunn.
-- **Høyre komposisjon:** blå rektangel bak; sort/hvitt foto i rotert, hvitinnrammet rektangel foran; liten oransje sirkel nederst; store, tynne sirkler til høyre; tekniske etiketter rundt motivet.
-- **Hero-høyde:** ca. 250 px etter header. Komposisjonen må stå omtrent midt på høyden, ikke som et vanlig bilde.
+**Typografi:** Store høy-kontrast-serifoverskrifter med stram linjehøyde, blå kursiv aksent i hero og kontakt, liten monospaced uppercase-mikrotekst og enkel sans i brødtekst. Håndskrevne notater har egen skrifttype fremfor kursiv standardserif.
 
-## 2. Sort tjenestebånd – ca. 300–340 px
+**Farger:** Varm off-white, nesten sort, klar mellomblå og små oransje punkt. Kontrastflatene ligger i fast rekkefølge: lys, sort bånd, lys, blå, lys, sort, lys, sort.
 
-- Full bredde sort bånd, ca. 42 px høyt.
-- Små uppercase monospace-ord med stor tracking: strategi, design, utvikling, innhold, drift, rådgivning, enklere å velge, webproduksjon.no.
-- Oransje små prikker mellom ordene.
-- Dette er en visuell overgang og skal være tett, lav og horisontal.
+**Bilder:** Heroen har et rotert svart-hvitt fjellbilde over et blått rektangel og et lyst kort med håndtekst. Tjenesteseksjonen har et utsnitt av monokrome blader. Portrettet fra brukeren er brukt i den mørke om-seksjonen.
 
-## 3. Tjenesteseksjon – ca. 340–675 px
+**Prosjekter:** Referansebildet viser tre fiktive prosjektnavn. Disse er ikke kopiert som om de var ekte kunder. Den nye siden bruker ABC Bygg som det ene faktiske kundeprosjektet og to eksisterende konseptdemoer med tydelig merking. Illustrasjonsfoto i konseptkortene er stemningsbilder, ikke prosjektbevis.
 
-- Off-white bakgrunn.
-- Øverst liten seksjonsetikett «02 / TJENESTER».
-- Venstre hovedtittel: «Start med det viktigste.» i stor serif; «viktigste.» kursiv. Under tittelen en håndtegnet, tynn understrek.
-- Høyre kort forklaring, omtrent 230–270 px bred, vertikalt midtstilt. Ved siden av finnes en liten håndtegnet pil.
-- Et stort sort/hvitt abstrakt bildefelt ligger bak høyre side og går delvis ut mot høyrekant.
-- To tjenestekort ligger nederst/overlappende:
-  - venstre: lys grå/off-white kort
-  - høyre: sort kort
-  - begge ca. 41 % av innholdsbredde og ca. 180 px høye
-  - ikon øverst til venstre, tjenestenavn i serif, tre korte punkt, pris nederst høyre og rund pilknapp
-- Stor håndskrevet notis helt til høyre: «Riktig startpunkt gir større muligheter.»
-- Seksjonen skal føles som en komponert plakat, ikke som en enkel standard grid.
+## Kontroll
 
-## 4. Prosess – ca. 675–915 px
-
-- Full bredde klar blå flate.
-- Innhold i to soner:
-  - venstre ca. 34 %: stor hvit serif-tittel «Fra første melding til ferdig side.» med kursiv siste linje og liten pil/brødtekst under
-  - høyre ca. 60 %: fire steg horisontalt på en tynn linje
-- Hvert steg har mørk nesten-sort rund sirkel med enkel hvit line-icon.
-- Tall 01–04 over sirklene, navn under, én kort forklaring under navn.
-- Prosesslinjen starter ved første sirkel og slutter ved fjerde.
-- Nederst høyre liten tekst «Fra idé til virkelighet» og tynn linje.
-
-## 5. Prosjektseksjon – ca. 915–1140 px
-
-- Off-white bakgrunn.
-- Venstre ca. 23 %: liten seksjonsetikett og stor tittel «Noen av våre prosjekter.» i serif/kursiv. Tynn håndtegnet pil under.
-- Midt/høyre: tre like brede prosjektkort på én rad.
-- Hvert kort: visuelt bildeområde ca. 150 px høyt, prosjektnavn under, énlinjes beskrivelse og liten pil.
-- Helt høyre ekstra sidekolonne med små monospace-linjer, oransje prikk og «Se flere prosjekter».
-- For dette nettstedet skal kortene bruke tilgjengelig, sannferdig materiale: ABC Bygg som ekte prosjekt og tydelig merkede konseptdemoer som arbeidsprøver. Ingen oppdiktede kunder eller resultater.
-
-## 6. Om oss – ca. 1140–1340 px
-
-- Full bredde nesten sort flate.
-- Venstre bildeområde ca. 28 % bredt, svart/hvitt portrett i mørk ramme.
-- Venstre ytterkant: håndskrevet/skrivemaskin-notis «Direkte kontakt alltid» med pil.
-- Midt: stor hvit serif-tittel «Et lite studio. Direkte kontakt.» med kursiv andre linje.
-- Under: liten, lavkontrast brødtekst.
-- Høyre: stor tynn sirkel med oransje prikk og liten tekst «Mindre byrå / sterkere engasjement».
-
-## 7. Kontakt – ca. 1340–1515 px
-
-- Off-white bakgrunn.
-- Venstre: stor serif-tittel «Har du en idé? La oss starte der.» med blå kursiv andre linje.
-- Under: kort grå forklaring og liten kontaktlinje nederst.
-- Høyre: lyst, nesten usynlig skjema med to inputfelt på første rad, textarea under, mørk fullbredde knapp.
-- Helt høyre håndtegnet notis «Gode ideer starter med en melding» med pil.
-- Mye luft; skjemaet skal være rolig, ikke et tungt panel.
-
-## 8. Footer – ca. 1515–1580 px
-
-- Full bredde nesten sort.
-- Venstre logo og kort tagline.
-- Midt små navigasjonslenker og eventuelle sosiale lenker.
-- Høyre copyright og liten tekst.
-- Lav høyde, tynn toppgrense og små tekststørrelser.
-
-## Implementeringsrekkefølge
-
-1. Bygg layoutskalett og header/hero.
-2. Live-kontroller hero mot referansens bredder, høyder og plassering.
-3. Bygg sort tjenestebånd og tjenesteseksjon.
-4. Live-kontroller tjenestebånd + tjenester.
-5. Bygg blå prosessblokk.
-6. Live-kontroller prosessblokk.
-7. Bygg prosjektseksjon med sannferdig innhold.
-8. Bygg om, kontakt og footer.
-9. Live-kontroller hele siden på desktop og mobil.
-10. Gjør kun endringer som kan begrunnes direkte i referansens komposisjon.
+Siden ble gjenskapt fra ny HTML/CSS fremfor å lappe videre på tidligere kode. Den ble deretter rendret i en faktisk Chromium-viewport på **1152 × 2048**, med full sidehøyde **2048 px** og seksjonsgrenser som i tabellen. Mobil ble testet separat ved 390 px bredde. Lik seksjonsgeometri betyr ikke identiske fotografier, skrifttyper eller piksler; de gjenstående avvikene skyldes særlig at de reelle prosjektbildene og tilgjengelige fontene ikke er de samme som i referansen.

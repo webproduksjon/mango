@@ -122,7 +122,7 @@ img { display: block; }
 .project-image { height: 142px; width: 100%; overflow: hidden; background: #193527; }
 .project-image img { width: 100%; height: 100%; object-fit: cover; }
 .project-card:nth-of-type(1) .project-image img { object-position: 70% center; }
-.project-card:nth-of-type(2) .project-image img { filter: grayscale(100%); }
+.project-card:nth-of-type(2) .project-image img { filter: saturate(.75) brightness(.75); object-position: center 38%; }
 .project-card:nth-of-type(3) .project-image img { object-position: center 55%; }
 .project-caption { display: flex; justify-content: space-between; align-items: center; margin: 6px 0 2px; font-size: 10px; }
 .project-caption strong { font-weight: 700; }
